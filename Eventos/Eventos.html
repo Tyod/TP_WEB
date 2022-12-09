@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Eventos.css" rel="stylesheet" type="text/css">
+    <title>WWF-Eventos</title>
+</head>
+<body>
+
+    <header id="menu">
+        <div class="inside" id="home"><a href="../Home/home.html">WWF</a></div>
+        <div class="inside" id="eventos"> <a href="../Eventos/Eventos.html"> Eventos </a> </div>
+        <div class="inside" id="login"> <a href="../Login/Login.html"> Iniciar sessão </a> </div>
+        <div class="inside" id="Somos"> <a href="../Quem somos/quem_somos.html"> Quem Somos</a></div>
+        <div class="inside" id="Contactos"> <a href="../Contactos/contactos.html"> Contactos</a></div>
+    </header>
+
+    <h1>Alguns dos nossos projetos:</h1>
+    <div id="imagens">
+       <div id="floresta" class="galeria"><a href="../Projeto Carbi/Carbi.html"><img  src="../img/Pfloresta.jpg" width="360px" height="180px"></a><p>WWF avança com projeto em Laos para a preservação <br> de especies e da floresta.</p></div>
+       <div id="peixes" class="galeria"><a href="../Projeto Peixes/Peixes.html"><img src="../img/Ppeixes.jpg"  width="360px" height="180px"></a><p>Projeto desenvolvido pela WWF tem em vista  o controlo <br> da pesca em Laos.</p></div>
+       <div id="elefante" class="galeria"><a href="../Projeto Elephant/Elephant.html"><img src="../img/Pelefante.jpg"  width="360px" height="180px"></a><p>Adoção de medidas na prevenção da extinção do elefante <br>são tomadas pela WWF.</p></div>
+    </div>
+
+<div id="box-sugestao">
+    <h3>  Possui sugestões <br>      para <br> projetos futuros?</h3>
+    <button id="sugestao"> De-nos a sua sugestão!</button>
+</div>
+
+<div id="surgir">
+    <textarea id="texto-sugestao" cols="100" rows="7" placeholder="Escreva aqui..."></textarea>
+    <button id="submeter" type="submit">Submeter</button>
+</div> 
+    <script>
+        var botao = document.getElementById("sugestao");
+        var caixa_botao = document.getElementById("surgir");
+        var texto = document.getElementById("texto-sugestao");
+        var submit = document.getElementById("submeter");
+        window.onload = function ()
+        {
+            inith();
+        };
+
+        function inith ()
+        {
+            caixa_botao.style.visibility="hidden";
+        }
+
+        function surgir ()
+        {
+            
+            caixa_botao.style.visibility="visible";
+            
+        }
+       botao.addEventListener("click", surgir);
+
+        function text ()
+        {
+            if(texto.value!='')
+            {
+                alert("Obrigado pela sugestão!")
+            }
+            if(texto.value=='')
+            {
+                alert("Insira a sugestão!");
+            }
+        }
+        submit.addEventListener("click", text);
+    </script>
+</body>
+</html>

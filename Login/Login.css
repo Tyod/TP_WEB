@@ -1,0 +1,82 @@
+div#menu
+{
+    border: solid;
+    border-radius: 20px;
+    border-color:black;
+    background-color: rgba(255, 246, 246, 0.75);
+    padding: 20px;
+    width: 25em;
+    height: 20em;
+    position: absolute;
+    top: 32%;
+    left: 15%;
+}
+
+h1
+{
+    font-size: 1.5em;
+    margin-top: -10px ;
+}
+
+h1
+{
+    font-size: 2em;
+}
+
+div#menu input.menu
+{
+    display: block;
+    width: 20em;
+    padding: 2px;
+    margin: 10px;
+    position: relative;
+    left: -10px;
+}
+
+#checkbox 
+{
+    margin: 15px;
+    margin-left: 0;
+}
+
+h2
+{
+    font-size: 0.8em;
+    text-align: right;
+    position: relative;
+    bottom: -25px;
+}
+
+body
+{
+    display: flex;
+    margin: 0% auto;
+    padding-bottom: 0;
+    background-image: url("../img/trigre.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+ 
+}
+
+#wwf2
+{
+    height: 65%;
+    width: 25%;
+    position: relative;
+    bottom: -20px;
+    right: -385%;
+   
+}
+ div#mudar 
+ {
+     position: relative;
+     top: 35px;
+ }
+ h3
+{
+    position: relative;
+    bottom: -15px; 
+}
+
+

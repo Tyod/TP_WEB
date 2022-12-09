@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WWF-Iniciar sessão</title>
+    <link href="Login.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="Registo.html">
+</head>
+<body>
+    <form action="" method="POST">
+    <div id="menu">
+        <h1>Iniciar sesssão</h1>
+        <h3>Insira os dados de utilizador:</h3>
+        <div id="mudar">
+        <input id="username" class="menu" type="text" placeholder="Nome de utilizador" required>
+        <input id="password" class="menu" type="password" placeholder="Palavra-Passe" maxlength="8" required>
+        <input id="checkbox" type="checkbox"> Manter sesssão inciada.<br>
+        <button id="login" class="menu" type="submit">Iniciar sessão</button>
+        <h2>Ainda não possui conta no nosso site?</h2> <a href="../Registo/Registo.html"><h2>Clique aqui</h2></a>   
+    </div>
+    </div> 
+    </form>
+
+    <script>
+     var username = document.getElementById("username");
+     var password = document.getElementById("password");
+
+            function login () 
+            {
+                if(username.value!='' && password.value!='')
+                {
+                    alert("Sessão iniciada com sucesso!");
+                }
+            }
+         document.getElementById("login").addEventListener("click", login);
+    </script>
+    
+    <a href="../Home/home.html"><img id="wwf2" src="../img/wwf2.png"></a>
+    
+</body>
+</html>

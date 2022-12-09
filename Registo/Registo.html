@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WWF-Registo</title> 
+    <link href="Registo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <form action="" method="POST">
+    <div id="menu">
+        <h1>Bem vindo à WWF</h1>
+        <h3>Preencha os seguintes campos para efetuar o registo:</h2>
+        <div id="mudar">
+        <input class="menu" type="text" placeholder="Nome" required>
+        <input class="menu" type="number" placeholder="Idade" min="0"  required>
+        <input class="menu" type="text" placeholder="Nome de utilizador" required>
+        <input class="menu" type="text" placeholder="Email" required>
+        <input class="menu" id="password" type="password" placeholder="Palavra-Passe" maxlength="8"  required>
+        <input class="menu" id="confirm_password" type="password" placeholder="Confirmar Palavra-Passe" maxlength="8" required> <br> <br>
+        <button id="button" type="submit">Registrar</button>
+        </div>
+
+        <script>
+            var password = document.getElementById("password")
+            var confirm_password = document.getElementById("confirm_password");
+
+            function validatePassword() 
+            {
+                if(password.value != confirm_password.value)
+                {
+                confirm_password.setCustomValidity("Palavras-Passe não coincidem!");
+                } 
+                else 
+                {
+                confirm_password.setCustomValidity('');
+                }
+                if(password.value!='' && confirm_password.value!='' && password.value == confirm_password.value)
+                {
+                    alert("Registo efectuado com sucesso!");
+                }
+            }
+         document.getElementById("button").addEventListener("click", validatePassword);
+        </script>
+    </div>
+    </form>
+    <a href="../Home/home.html"><img id="wwf2" src="../img/wwf2.png"></a>
+</body>
+</html>

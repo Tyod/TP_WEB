@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WWF-Donativos</title>
+    <link href="Doacao.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div>
+        <header id="menu">
+            <div class="inside" id="home"><a href="../Home/home.html">WWF</a></div>
+            <div class="inside" id="eventos"> <a href="../Eventos/Eventos.html"> Eventos </a> </div>
+            <div class="inside" id="login"> <a href="../Login/Login.html"> Iniciar sessão </a> </div>
+            <div class="inside" id="Somos"> <a href="../Quem somos/quem_somos.html"> Quem Somos</a></div>
+            <div class="inside" id="Contactos"> <a href="../Contactos/contactos.html"> Contactos</a></div>
+        </header>    
+        
+        <h1>Donativos</h1>
+        
+        <div>
+            <h3>Doar à WWF</h3>
+            <p id="texto">Você pode proteger espécies ameaçadas e os seus habitats hoje com uma doação para a  World Wildlife Fund. <br> O seu suporte no trabalho de conservação global da WWF fará uma grande diferença.</p>
+        </div>
+        <br>
+        <div>
+            <h3>Quantia da Doação</h3>
+            <div class="amount">Quantia:</div>
+            <input id="Quantia" type="number" placeholder="Quantia" min="0">
+            <span class="input-group-addon">€</span>
+        </div>
+        <br>
+        <div>
+            <h3>Método de Pagamento</h3>
+            <p>Selecione um método de pagamento: </p>
+                <ul>
+                    <select id="checklist" name="checklist" onchange="change('change1', this)">
+                        <option disabled selected >Escolha Pagamento</option>
+                        <option value='0'>PayPal</option>
+                        <option value='1'>Paysafe</option>
+                        <option value='2'>Multibanco</option>
+                        <option value='3'>Mastercard</option>
+                        <option value='4'>Visa</option>
+                    </select>
+                </ul> 
+                </div>
+            </div>
+            <br>
+            <div id="change1" style="display: none;">
+                <p>Número de Cartão de Crédito <br> <input id="cc" type="number" required></p>
+                <p>Data de Validade <br> <input id="dv" type="date" required></p>
+                <p>Número CVV <br> <input id="cvv" type="number"  required></p>
+            </div>
+            
+            <p><button id="enviar" type="submit" onclick="function enviar()">Enviar</button></p>        
+            <div class="imagens">
+                <h3>Método de Pagamento</h3>
+                <p>Aceitamos os seguintes métodos de pagamento seguro:</p>
+                <img src="../img/paypal.png">
+                <img src="../img/paysafe.png">
+                <img src="../img/visa.png">
+                <img src="../img/mastercard.png">
+                <img src="../img/multibanco.png">
+                <p>Os dados relativos às tuas informações de pagamento são protegidos por tecnologia Secure Socket Layer (SSL), certificada digitalmente.</p>
+            </div>  
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function change(divId, element){
+        document.getElementById('change1').style.display = element.value >= 3 ? 'block' : 'none';
+    }
+
+    var cc = document.getElementById("cc");
+    var dv = document.getElementById("dv");
+    var cvv = document.getElementById("cvv");
+    var dinheiro = document.getElementById("Quantia");
+    var escolha = document.getElementById("checklist");
+
+    function enviar2 () 
+    {
+        if(cc.value!='' && dv.value!='' && cvv.value!='' && dinheiro.value!=0)
+        {
+            alert("Obrigado pelo donativo!");
+        }
+        if(dinheiro.value==0)
+        {
+            altert("Insira a quantia!");
+        }
+    }
+    document.getElementById("enviar").addEventListener("click", enviar2);
+    
+    function enviar(){
+            if(dinheiro.value!=0 && escolha.value>=0 && escolha.value<=2){
+                alert("Obrigado pelo donativo!");
+            } 
+            if(dinheiro.value==0)
+            {
+                alert("Insira a quantia!");
+            }
+            if(escolha.value!=1 && escolha.value!=2 && escolha.value!=3 && escolha.value!=0 && escolha.value!=4)
+            {
+            alert("Insira o metodo de pagamento!");
+            }
+    }
+    document.getElementById("enviar").addEventListener("click", enviar);
+</script>
+</body>
+</html>
